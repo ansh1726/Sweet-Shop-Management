@@ -29,4 +29,14 @@ describe("SweetShop", () => {
     expect(shop.viewSweets()).not.toContain(sweet);
   });
 
+  //searching sweet
+  test("searches sweets by name", () => {
+    shop.addSweet(new Sweet(1, "Ladoo", "Traditional", 10, 20));
+    shop.addSweet(new Sweet(2, "Barfi", "Milk", 15, 10));
+    const result = shop.searchSweet("lad");
+    expect(result.length).toBe(1);
+    expect(result[0].name).toBe("Ladoo");
+  });
+
+
 })
