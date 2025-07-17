@@ -46,5 +46,15 @@ describe("SweetShop", () => {
     expect(sorted[0].name).toBe("Barfi");
   });
 
+  //test for checking inventory
+    test("checks low inventory", () => {
+    shop.addSweet(new Sweet(1, "Ladoo", "Traditional", 10, 2));
+    shop.addSweet(new Sweet(2, "Barfi", "Milk", 15, 10));
+    const lowStock = shop.checkLowInventory();
+    expect(lowStock.length).toBe(1);
+    expect(lowStock[0].name).toBe("Ladoo");
+  });
+
+  
 
 })
