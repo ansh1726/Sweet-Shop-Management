@@ -1,0 +1,23 @@
+{
+  "name": "sweet-shop-management",
+  "version": "1.0.0",
+  "description": "\"A Sweet Shop Management System following TDD.\"\r <br>\r Author - Ansh Chaudhary",
+  "main": "sweets.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansh1726/Sweet-Shop-Management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansh1726/Sweet-Shop-Management/issues"
+  },
+  "homepage": "https://github.com/ansh1726/Sweet-Shop-Management#readme",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
