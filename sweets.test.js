@@ -29,13 +29,21 @@ describe("SweetShop", () => {
     expect(shop.viewSweets()).not.toContain(sweet);
   });
 
-  //searching sweet
+  //searching sweet test
   test("searches sweets by name", () => {
     shop.addSweet(new Sweet(1, "Ladoo", "Traditional", 10, 20));
     shop.addSweet(new Sweet(2, "Barfi", "Milk", 15, 10));
     const result = shop.searchSweet("lad");
     expect(result.length).toBe(1);
     expect(result[0].name).toBe("Ladoo");
+  });
+  
+  //sorting the sweets test
+   test("sorts sweets by price", () => {
+    shop.addSweet(new Sweet(1, "Ladoo", "Traditional", 10, 20));
+    shop.addSweet(new Sweet(2, "Barfi", "Milk", 5, 10));
+    const sorted = shop.sortSweets("price");
+    expect(sorted[0].name).toBe("Barfi");
   });
 
 
