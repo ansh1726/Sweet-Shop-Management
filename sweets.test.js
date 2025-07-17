@@ -55,6 +55,9 @@ describe("SweetShop", () => {
     expect(lowStock[0].name).toBe("Ladoo");
   });
 
-  
-
+  test("updates quantity", () => {
+    shop.addSweet(new Sweet(1, "Ladoo", "Traditional", 10, 2));
+    shop.updateQuantity(1, 15);
+    expect(shop.viewSweets()[0].quantity).toBe(15);
+  });
 })
