@@ -18,5 +18,11 @@ describe("SweetShop", () => {
     shop.addSweet(sweet1);
     expect(() => shop.addSweet(sweet2)).toThrow("Sweet with this ID already exists");
   });
+ test("deletes a sweet", () => {
+    const sweet = new Sweet(1, "Ladoo", "Traditional", 10, 20);
+    shop.addSweet(sweet);
+    shop.deleteSweet(1);
+    expect(shop.viewSweets()).not.toContain(sweet);
+  });
 
 })
